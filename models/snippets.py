@@ -8,10 +8,12 @@ class SnippetsModel:
         self.cache = {}
 
     def update_expiration(self, snippet_name):
+
       current_time = datetime.datetime.now() 
       created_time = self.cache[snippet_name]["created_at"]
       ttl = self.cache[snippet_name]["expires_in"]
       diff = (current_time - created_time).seconds
+
       if diff > ttl and created_time <= current_time:
         self.delete(snippet_name)
         raise Exception("Sorry, snippet {} has expired and has been purged.".format(snippet_name))
