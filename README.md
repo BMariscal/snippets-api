@@ -23,7 +23,7 @@ Why? Little boiler plate, easy to get started and to read, non-opionated backend
 
     `pip install -r requirements.txt`
     
-* In the root directory, run:
+* At the root directory, run:
     `python3 main.py`
     
     Server will be found at: `http://0.0.0.0:8080/`
