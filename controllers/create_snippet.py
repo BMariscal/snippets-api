@@ -12,7 +12,6 @@ def valid_input(data):
 def create(data):
   if not valid_input(data):
     raise Exception("Invalid input.")
-    return
 
   snippet_data = {
     "name": "",
