@@ -1,14 +1,35 @@
 # Snippets API
 
-## Features: 
-TTL snippets - A snippet TTL is set by the `expires_in` POST request body field. If snippet is still alive and accessed before its expiration, 30 seconds are added to its TTL
+API to create snippets with TTL. Snippet's TTL can be customized upon snippet creation. 
+A snippet's TTL increases by 30 seconds every time a snippet is retrieved or liked.  
 
-`/like` endpoint - PUT request to `/like` with snippet name increases snippet expiration by 30 seconds
+
+## Features: 
+* TTL snippets - A snippet TTL is set by the `expires_in` POST request body field. If snippet is still alive and accessed before its expiration, 30 seconds are added to its TTL
+
+* `/like` endpoint - PUT request to `/like` with snippet name increases snippet expiration by 30 seconds
+
 
 ## Languages and Libraries: 
 Flask, Python 3.8.2
 
-Why? Little boiler plate, easy to get started and read, non-opionated backend framework
+Why? Little boiler plate, easy to get started and to read, non-opionated backend framework
+
+
+## Setup and Run locally:
+
+* Set up virtualenv and initialize virtualenv. [Help doing so.](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+* Install all packages in requirements.txt:
+
+    `pip install -r requirements.txt`
+    
+* In the root directory, run:
+    `python3 main.py`
+    
+    Server will be found at: `http://0.0.0.0:8080/`
+
+
+
 
 ## Organization:
 ```
@@ -20,7 +41,7 @@ Snippets-API
           process_payload.py
           update_snippet.py
       models/
-          db.py
+          db.py [Using global object as db for now]
           schema.py
           snippets.py
       tests/
@@ -30,7 +51,7 @@ Snippets-API
 
 
 
-## Run server:
+## Run server on repl.it:
 
 Server and routes are located in main.py 
 * Click "Start" or "Restart" button on repl.it
