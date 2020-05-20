@@ -28,9 +28,3 @@ def create(data):
   created_entity = store.post(snippet_data["name"], snippet_data)
   entity = process_entity(created_entity)
   return entity
-
-
-
-
-
-

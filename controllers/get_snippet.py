@@ -6,7 +6,3 @@ def fetch(snippet_name):
   existing_entity = store.get(snippet_name)
   snippet = process_entity(existing_entity)
   return snippet
-
-
-
-  
