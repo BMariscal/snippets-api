@@ -51,7 +51,7 @@ pathlib2==2.3.5
 pexpect==4.8.0
 pipenv==2018.11.26
 pkginfo==1.5.0.1
-poetry==1.0.5
+poetry==1.1.9
 ptyprocess==0.6.0
 py2app==0.7.3
 pyasn1==0.4.7
